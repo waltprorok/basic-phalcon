@@ -1,7 +1,5 @@
 <?php
 
-//namespace App\Models\Users;
-
 use Phalcon\Filter\Validation;
 use Phalcon\Filter\Validation\Validator\Email as EmailValidator;
 

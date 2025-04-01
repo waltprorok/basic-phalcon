@@ -66,7 +66,7 @@ $di->setShared('view', function () {
  */
 $di->setShared('db', function () {
     return new Sqlite([
-        'phalcon' => APP_PATH . '/database/database.sqlite',
+        'dbname' => APP_PATH . '/database/phalcon.sqlite',
     ]);
 });
 

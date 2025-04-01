@@ -6,16 +6,21 @@ class UserController extends \Phalcon\Mvc\Controller
 
     public function indexAction()
     {
-        echo "Hello from UserController!";
+        $connection = $this->di->get('db');
+
+        $result = $connection->query("SELECT sqlite_version() AS version")->fetch();
+        echo "SQLite Version: " . $result["version"];
     }
 
     public function showAction($id)
     {
         $user = Users::findFirst($id);
 
-        echo "User ID: " . $id;
+        echo "User ID: " . $user->id;
+        echo "User Name: " . $user->name;
     }
 
+//require 'public/index.php';
 //$user = new Users();
 //$user->name = 'John Doe';
 //$user->email = 'john@example.com';

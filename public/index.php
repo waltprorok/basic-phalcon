@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 
 define('BASE_PATH', dirname(__DIR__));
 define('APP_PATH', BASE_PATH . '/app');
+require_once __DIR__ . '/../vendor/autoload.php';
 
 try {
     /**
